@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.alibaba.gov.android.chinaoly.meeting">
+
+    <application>
+
+        <activity android:name=".view.MeetingActivity"/>
+        <activity android:name=".view.WebActivity"/>
+
+    </application>
+
+</manifest>

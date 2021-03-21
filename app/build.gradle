@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.chinaoly.yiwangban"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+
+dependencies {
+    //noinspection GradleCompatible
+    implementation "com.android.support:support-v4:28.0.0"
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:28.0.0"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation project(path: ':meeting')
+
+//    implementation(name:'meeting', ext:'aar')
+
+}
