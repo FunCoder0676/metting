@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.alibaba.gov.android.chinaoly.meeting">
 
-    <application>
+    <application android:usesCleartextTraffic="true">
 
         <activity android:name=".view.MeetingActivity"/>
         <activity android:name=".view.WebActivity"/>

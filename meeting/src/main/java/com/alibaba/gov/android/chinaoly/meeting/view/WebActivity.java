@@ -18,16 +18,16 @@ public class WebActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
 
-        WebView webView = (WebView) findViewById(R.id.webview);
+        WebView webView =findViewById(R.id.webview);
         WebSettings webSettings = webView.getSettings();
 
         webSettings.setJavaScriptEnabled(true); // 是否开启JS支持
         webSettings.setUseWideViewPort(true); // 缩放至屏幕大小
         webSettings.setLoadWithOverviewMode(true); // 缩放至屏幕大小
         webSettings.setDefaultTextEncodingName("UTF-8"); // 设置编码格式
-
+        webSettings.setDomStorageEnabled(true);
         webView.addJavascriptInterface(new WebAppInterface(this), "Android");
-        webView.loadUrl("https://www.jianshu.com/p/b6f2f1334053");
+        webView.loadUrl("http://10.10.14.72");
 
 
     }
